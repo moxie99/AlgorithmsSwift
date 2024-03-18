@@ -23,3 +23,22 @@ class Solution {
         return consiArsteriskCount
     }
 }
+
+
+// ChatGPT3.5
+class Solution {
+    func countAsterisks(_ s: String) -> Int {
+        var pipeCount = 0
+        var consiArsteriskCount = 0
+
+        for el in s {
+            if el == "|" {
+                pipeCount += 1
+            } else if el == "*" && pipeCount % 2 == 0 {
+                consiArsteriskCount += 1
+            }
+        }
+
+        return consiArsteriskCount
+    }
+}
